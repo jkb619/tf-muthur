@@ -99,11 +99,11 @@ resource "aws_ecs_service" "muthur_server" {
 }
 
 resource "aws_ecs_task_definition" "muthur_server" {
-  cpu                      = 1024
+  cpu                      = 128
   container_definitions    = jsonencode(local.ecs_container_definition_muthur_server)
   execution_role_arn       = aws_iam_role.muthur_server.arn
   family                   = "muthur-server-${terraform.workspace}"
-  memory                   = 2048
+  memory                   = 256
   network_mode             = "awsvpc"
   requires_compatibilities = ["FARGATE"]
   tags                     = local.tags_rendered
