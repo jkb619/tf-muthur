@@ -3,35 +3,6 @@ variable aws_account_id {
   description = "Must populate this variable to use the module. Check the module release page for full variable description."
 }
 
-variable aws_automation_role_arn {
-  default = "arn:aws:iam::1111111111111:role/myfoundryvtt-kms-role"
-  description = "Must populate this variable to use the module. Check the module release page for full variable description."
-# SystemAdministrator
-# AWSKeyMangementServicePowerUser
-# custom policy:
-# {
-#    "Version": "2012-10-17",
-#    "Statement": [
-#        {
-#            "Sid": "VisualEditor0",
-#            "Effect": "Allow",
-#            "Action": "kms:*",
-#            "Resource": "*"
-#        }
-#    ]
-# }
-}
-
-variable foundry_password {
-  default = "myfoundrypassword"
-  description = "Must populate this variable to use the module. Check the module release page for full variable description."
-}
-
-variable foundry_username {
-  default =  "myfoundryloginname"
-  description = "Must populate this variable to use the module. Check the module release page for full variable description."
-}
-
 variable ssl_certificate_arn {a
   default = "arn:aws:acm:us-east-2:stuff"
   description = "arn of the existing ssl certificate"
@@ -45,9 +16,4 @@ variable domain_name {a
 variable route53_zone_id {
   default = "Z1A...B"
   description = "zone id of the domain_name root"
-}
-
-variable foundry_admin_key {
-  default = "myadminpass"
-  description = "password to log into foundry UI of the vtt"
 }
